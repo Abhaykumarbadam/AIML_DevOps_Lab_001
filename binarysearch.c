@@ -7,18 +7,20 @@ void main()
     int *a, i, n, key, low, high, mid, flag = 0;
     double st, et, tt;
 
-    printf("\nenter no of elements");
-    scanf("%d", &n);
+    // printf("\nEnter no of elements");
+    // scanf("%d", &n);
+    n = 50
 
     a = (int*)malloc(n * sizeof(int));
 
-    printf("\nenter %d elements in sorted order", n);
+    // printf("\nenter %d elements in sorted order", n);
     for(i = 0; i < n; i++)
       //  scanf("%d", &a[i]);
       a[i]=i+1;
 
-    printf("\nenter element to search");
-    scanf("%d", &key);
+    // printf("\nenter element to search");
+    // scanf("%d", &key);
+    key = 29
 
     low = 0;
     high = n - 1;
