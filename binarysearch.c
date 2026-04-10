@@ -9,7 +9,7 @@ void main()
 
     // printf("\nEnter no of elements");
     // scanf("%d", &n);
-    n = 50
+    n = 50;
 
     a = (int*)malloc(n * sizeof(int));
 
@@ -20,7 +20,7 @@ void main()
 
     // printf("\nenter element to search");
     // scanf("%d", &key);
-    key = 29
+    key = 29;
 
     low = 0;
     high = n - 1;
