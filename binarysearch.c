@@ -1,54 +1,37 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
+#include <stdio.h>
 
-void main()
-{
-    int *a, i, n, key, low, high, mid, flag = 0;
-    double st, et, tt;
+int binarySearch(int arr[], int size, int target) {
+    int left = 0, right = size - 1;
 
-    // printf("\nEnter no of elements");
-    // scanf("%d", &n);
-    n = 50;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
 
-    a = (int*)malloc(n * sizeof(int));
-
-    // printf("\nenter %d elements in sorted order", n);
-    for(i = 0; i < n; i++)
-      //  scanf("%d", &a[i]);
-      a[i]=i+1;
-
-    // printf("\nenter element to search");
-    // scanf("%d", &key);
-    key = 29;
-
-    low = 0;
-    high = n - 1;
-
-    st = clock();
-    while(low <= high)
-    {
-        mid = (low + high) / 2;
-
-        if(a[mid] == key)
-        {
-            flag = 1;
-            break;
+        if (arr[mid] == target) {
+            return mid;  // Element found
         }
-        else if(a[mid] < key)
-            low = mid + 1;
-        else
-            high = mid - 1;
+        else if (arr[mid] < target) {
+            left = mid + 1;  // Search right half
+        }
+        else {
+            right = mid - 1; // Search left half
+        }
     }
-    et = clock();
 
-    tt = (double)(et - st) / CLOCKS_PER_SEC;
-    printf("\ntime spent: %f", tt);
-
-    if(flag == 1)
-        printf("\n%d element is found at %d location", key, mid);
-    else
-        printf("\nelement does not exist");
+    return -1; // Element not found
 }
 
+int main() {
+    int arr[] = {2, 4, 6, 8, 10, 12, 14};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 10;
 
+    int result = binarySearch(arr, size, target);
+
+    if (result != -1) {
+        printf("Element found at index %d\n", result);
+    } else {
+        printf("Element not found\n");
+    }
+
+    return 0;
+}
