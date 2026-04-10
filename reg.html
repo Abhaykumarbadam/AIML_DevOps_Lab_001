@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Voter Registration Form</title>
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:#da9007;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+form{
+    background:#33298a;
+    padding:40px;
+    width:400px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(54, 37, 37, 0.1);
+}
+h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+label{
+    display:block;
+    margin-top:10px;
+}
+input, select{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    border:1px solid #772370;
+    border-radius:4px;
+}
+button{
+    width:100%;
+    margin-top:15px;
+    padding:10px;
+    background:#361463;
+    color:rgb(23, 168, 84);
+    border:none;
+    border-radius:4px;
+    font-size:16px;
+    cursor:pointer;
+}
+button:hover{
+    background:#182b2723;
+}
+</style>
+</head>
+<body>
+<form>
+<h1>Voter Registration</h1>
+
+<label>Full Name</label>
+<input type="text" required>
+
+<label>Date of Birth</label>
+<input type="date" required>
+
+<label>Gender</label>
+<select required>
+<option value="">Select</option>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+
+<label>Address</label>
+<input type="text" required>
+
+<label>State</label>
+<input type="text" required>
+
+<label>Voter ID Number</label>
+<input type="text" required>
+
+<button type="submit">Register</button>
+</form>
+</body>
+</html>
+
